@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz - One Big, Ugly Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/foundation-flex.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <header class="room-for-progress">
+      <span class="company-name">Meet up event planner</span>
+    </header>
+    
+    <div class="progress-container">
+      <div class="progress" role="progressbar" tabindex="0" aria-valuenow="20" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+        <span class="progress-meter" style="width: 0%">
+          <p class="progress-meter-text"></p>
+        </span>
+      </div>
+    </div>
+    
+    <h3>Register as organizer</h3>  
+    
+    <section class="form">
+      <div id="flsh"></div>
+      <h3>Your Name</h3>
+      <form action="/organizer" method="post" id="form1" autocomplete="on">
+        <label>First Name
+          <input type="text" name="fname" placeholder="First Name" id="fname1" required autofocus>
+        </label>
+        <label>Last Name
+          <input type="text" name="lname" placeholder="Last Name" id="lname1" required>
+        </label>
+        
+        <label>Email Address
+          <input type="email" name="email" id="email" required>
+        </label>
+        
+        <label>Password
+          <input type="password" name="password" id="password" required>
+        </label>
+        <label>Please retype password
+          <input type="password" name="password2" id="password2" required>
+        </label>
+        <h3>Personal Information (optional)</h3>
+        <label>Title
+          <input type="text" name="title" id="title">
+        </label>
+        <label>Job title
+          <input type="text" name="jobtitle" id="jobtitle">
+        </label>
+        <label>Employer
+          <input type="text" name="employer" id="employer">
+        </label>
+        <label>Birthday
+          <input type="date" name="birthday" id="birthday">
+        </label>
+        
+        <h3>Your Address</h3>
+        <label>Address Line 1
+          <input type="text" name="addr1" id="addr1" required>
+        </label>
+        <label>Address Line 2
+          <input type="text" name="addr2" id="addr2">
+        </label>
+        <label>City
+          <input type="text" name="addrcity" id="addrcity" required>
+        </label>
+        <label>State/Province
+          <input type="text" name="addrstate" id="addrstate">
+        </label>
+        <label>Postal Code
+          <input type="text" name="addrpc" id="addrpc" required>
+        </label>
+        <label>Country
+          <input type="text" name="addrcountry" id="addrcountry" required>
+        </label>
+        <section class="order-review">
+          <input id="submit" type="submit">
+        </section>
+      </form>
+    </section>
+    <script src="js/jquery.js">
+    </script>
+    <script src="js/foundation.js">
+    </script>
+    <script src="js/app.js">
+    </script>
+
+  </body>
+</html>

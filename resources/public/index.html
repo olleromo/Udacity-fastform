@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz - One Big, Ugly Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/foundation-flex.css">
+  <link rel="stylesheet" href="css/foundation.css">
+  
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header class="room-for-progress">
+    <span class="company-name">Meet up event planner</span>
+  </header>
+   
+  <div class="progress-container">
+    <div class="progress" role="progressbar" tabindex="0" aria-valuenow="20" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+      <span class="progress-meter" style="width: 0%">
+        <p class="progress-meter-text"></p>
+      </span>
+    </div>
+  </div>
+  
+
+   
+  <section class="form">
+      <div id="flsh"></div>
+     <h3>Your Name</h3>
+      <form id="form1" autocomplete="on" data-abide>
+      <label>First Name
+        <input type="text" name="fname" placeholder="First Name" id="fname1" required autofocus>
+      </label>
+      <label>Last Name
+        <input type="text" name="lname" placeholder="Last Name" id="lname1" required>
+      </label>
+
+    <label>Email Address
+      <input type="email" name="email" id="email" required>
+    </label>
+
+    <label>Put me on the mailing list?
+      <input class="inline" type="checkbox">
+    </label>
+
+    <h3>Your Credit Card Information</h3>
+    <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
+    <label>Name on the Credit Card
+      <input type="text" name="CCname" autocomplete="off" id="ccname" required>
+    </label>
+    <label>Credit Card Number
+      <input type="text" id="ccnumber" required>
+    </label>
+
+    <label>Expiration Date
+      <input type="text" placeholder="MM / YYYY" id="ccdate">
+    </label>
+    <label>CVV
+      <input type="number" id="cccvv" required>
+    </label>
+
+    <h3>Your Billing Address</h3>
+    <label>First Name
+      <input type="text" name="fname" id="fname2" required>
+    </label>
+
+    <label>Last Name
+      <input type="text" name="lname" id="lname2" required>
+    </label>
+    <label>Company
+      <input type="text" name="company">
+    </label>
+    <label>Address Line 1
+      <input type="text" name="address1" id="addr1" required>
+    </label>
+    <label>Address Line 2
+      <input type="text" name="address2" id="addr2">
+    </label>
+    <label>City
+      <input type="text" name="addressCity" id="addrcity" required>
+    </label>
+    <label>State/Province
+      <input type="text" name="addressState" id="addrstate">
+    </label>
+    <label>Postal Code
+      <input type="text" name="addressPC" id="addrPC" required>
+    </label>
+    <label>Country
+      <input type="text" name="addressCountry" id="addrcountry" required>
+    </label>
+  </section>
+
+      <label>Shipping address same as billing address?
+      <input class="inline" type="checkbox">
+    </label>
+
+
+  <section class="order-review">
+    <h3>Your Order</h3>
+    <table class="your-order">
+      <tr class="headings">
+        <td>Product</td>
+        <td>Quantity</td>
+        <td>Price</td>
+        <td>Total</td>
+      </tr>
+      <tr>
+        <td>Game Console 2015</td>
+        <td>1</td>
+        <td>$500.00</td>
+        <td>$500.00</td>
+      </tr>
+      <tr>
+        <td>Platformer Bros 3D</td>
+        <td>1</td>
+        <td>$50.00</td>
+        <td>$50.00</td>
+      </tr>
+      <tr class="total">
+        <td>Total</td>
+        <td>$550.00</td>
+      </tr>
+    </table>
+
+    <input id="submit" type="submit">
+  </section>
+  </form>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/foundation.js"></script>
+  <!-- <script src="js/jquery.validate.js"></script> -->
+  <!-- <script src="js/additional-methods.js"></script> -->
+  <script src="js/app.js"></script>
+  
+  <!-- <script src="js/foundation.abide.js"></script> -->
+</body>
+</html>

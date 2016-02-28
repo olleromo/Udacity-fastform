@@ -1,0 +1,2 @@
+lein new compojure hello-world
+lein ring server-headless
