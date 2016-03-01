@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/foundation-flex.css">
+
     
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
   </head>
   <body>
 
@@ -46,21 +47,7 @@
         <label>Please retype password
           <input type="password" name="password2" placeholder="Please retype password" id="password2" required>
         </label>
-        <h3>Personal Information (optional)</h3>
-        <div class="row">
-          <div class="title small-2">
-          <label class="title" for="title">Title</label>
-          <input type="text" name="title" placeholder="Title" id="title"/>
-          </div><div>
-          <label for="birthday">Birthday</label>
-          <input type="date" name="birthday" placeholder="Birthday" id="birthday"/>
-          </div>
-        </div>
 
-        <label class="labelshowhide" for="jobtitle">Job Title</label>
-          <input type="text" name="jobtitle" placeholder="Job Title" id="jobtitle">
-        <label class="labelshowhide" for="employer">Employer</label>
-          <input type="text" name="employer" placeholder="Employer" id="employer">
         
         <h3>Your Address</h3>
         <label class="labelshowhide" for="addr1" >Address Line 1</label>
@@ -79,7 +66,22 @@
           <input type="text" name="addrpc" placeholder="Postal Code" id="addrpc" required>
 
         <label class="labelshowhide" for="addrcountry">Country</label>
-          <input type="text" name="addrcountry" placeholder="Country" id="addrcountry" required>
+        <input type="text" name="addrcountry" placeholder="Country" id="addrcountry" required>
+
+        <h3>Personal Information (optional)</h3>
+        <div class="row">
+          <div class="title small-2">
+          <label class="title" for="title">Title</label>
+          <input type="text" name="title" placeholder="Title" id="title"/>
+          </div><div>
+          <label for="birthday">Birthday</label>
+          <input type="date" name="birthday" placeholder="Birthday" id="birthday"/>
+          </div>
+        </div>
+        <label class="labelshowhide" for="jobtitle">Job Title</label>
+          <input type="text" name="jobtitle" placeholder="Job Title" id="jobtitle">
+        <label class="labelshowhide" for="employer">Employer</label>
+          <input type="text" name="employer" placeholder="Employer" id="employer">        
 
         <section class="order-review">
           <input id="submit" type="submit">
@@ -91,6 +93,7 @@
     <script src="js/foundation.js">
     </script>
     <script src="js/organizer.js">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgqJoYi2AeOIt5So1zUt6EGstYol9QhDc&libraries=places">
     </script>
 
   </body>

@@ -36,6 +36,9 @@
 (defn get-meetups [req]
   (generate-string (sql/query db "select * from event")))
 
+(defn autocomplete [req]
+  (slurp "./resources/public/placeautocomplete.html"))
+
 (defroutes all-routes
   (GET "/" [] landing-page)
   (GET "/organize" [] organize)
@@ -46,6 +49,7 @@
   (POST "/organizer" req (save-user req))
   (GET "/attendee" [] attendee)
   (GET "/attendee/meetups" req (get-meetups req))
+  (GET "/autocomplete" req (autocomplete req))
   (resources "/") ;; static file url prefix /static, in `public` folder
   (not-found "<p>Page not found.</p>")) ;; all other, return 404
 
