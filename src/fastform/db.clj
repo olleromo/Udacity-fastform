@@ -1,5 +1,6 @@
 (ns fastform.db
   (:use [clojure.java.jdbc :as sql]
+        [ring.util.response]
         [cheshire.core :refer :all]))
 
 (def db {:classname "org.sqlite.JDBC", :subprotocol "sqlite", :subname "test.db"})
@@ -64,7 +65,9 @@
 (defn save-user [req]
   (let [fp (:form-params req)]
     (sql/insert! db :user
-                 (merge (into {} (map (fn [x] [(keyword (first x)) (second x)]) fp))))))
+                 (merge (into {} (map (fn [x] [(keyword (first x)) (second x)]) fp)))))
+  (redirect "/"))
+
 (def event1
   {:user 1
    :eventname "Json Conf"
@@ -139,7 +142,9 @@
   (let [fp (:form-params req)]
     (sql/insert! db :event
                  (merge {:user "Bob"}
-                        (into {} (map (fn [x] [(keyword (first x)) (second x)]) fp))))))
+                        (into {} (map (fn [x] [(keyword (first x)) (second x)]) fp)))))
+  (redirect "/attendee")
+  )
 
 (defn populate []
   (sql/insert! db :user user1)
