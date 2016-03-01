@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Quiz - One Big, Ugly Form</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/foundation.min.css"/>
+    <link rel="stylesheet" href="css/foundation-flex.css"/>
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+
+    <header class="room-for-progress">
+      <a href="/"><span class="company-name" style="color: #000;">Meet up event planner</a>
+      </span>
+    </header>
+    
+    <div class="progress-container">
+      <div class="progress" role="progressbar" tabindex="0" aria-valuenow="20" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+        <span class="progress-meter" style="width: 0%">
+          <p class="progress-meter-text">
+          </p>
+        </span>
+      </div>
+    </div>
+    
+      <section class="form">    
+    <form action="/organize" method="post" id="form1">   
+
+        <div id="flsh"></div>
+              
+        <h3>Create Event</h3>
+        
+        <label class="labelshowhide" for="eventname">Name of the event
+        </label>
+        <input type="text" name="eventname" placeholder="Event Name" id="eventname" required autofocus>
+          
+        <label class="labelshowhide" for="eventtype">Type of event
+        </label>
+        <input type="text" name="eventtype" placeholder="Event Type" id="eventtype" required>
+            
+        <label class="labelshowhide" for="eventhost">Event host
+        </label>
+        <input type="text" name="eventhost" placeholder="Event Host" id="eventhost" required>
+              
+              
+          <div class="row">
+            <label class="datespace">Event start
+              <input type="datetime-local" name="eventstart" id="eventstart" onblur="eventStartHandlerSignal();" required>
+            </label>
+            
+            <label>Event end
+              <input type="datetime-local" name="eventend" id="eventend" onblur="eventEndHandlerSignal();" required>
+            </label>
+          </div>
+          
+          <label class="labelshowhide" for="eventguestlist">Guest list
+          </label>
+          <input type="text" name="eventguestlist" placeholder="Event Guest List" id="eventguestlist">
+            
+            <h3>Location
+            </h3>
+            <label class="labelshowhide" for="addr1">Address Line 1
+            </label>
+            <input type="text" name="addr1" placeholder="Address Line 1" id="addr1" required>
+              
+              <label class="labelshowhide" for="addr2">Address Line 2
+              </label>
+              <input type="text" name="addr2" placeholder="Address Line 2" id="addr2">
+                
+                <label class="labelshowhide" for="addrcity">City
+                </label>
+                <input type="text" name="addrcity" placeholder="City" id="addrcity" required>
+                  
+                  <label class="labelshowhide" for="addrstate">State/Province
+                  </label>
+                  <input type="text" name="addrstate" placeholder="State" id="addrstate">
+                    
+                    <label class="labelshowhide" for="addrpc">Postal Code
+                    </label>
+                    <input type="text" name="addrpc" placeholder="Postal Code" id="addrpc" required>
+                      
+                      <label class="labelshowhide" for="addrcountry">Country
+                      </label>
+                      <input type="text" name="addrcountry" placeholder="Country" id="addrcountry" required>
+                        
+                        <h3>Message to the guests
+                        </h3>
+                        <label class="labelshowhide" for="eventmessage">Message to the guests</label>
+                        <input type="text" name="eventmessage" placeholder="Message" id="eventmessage">
+                          
+      </section>
+      
+      <section class="order-review">
+        <input id="submit" type="submit">
+      </section>
+      
+    </form>
+    
+    <script src="js/jquery.js">
+    </script>
+    <script src="js/foundation.js">
+    </script>
+    <script src="js/organize.js">
+    </script>
+    
+  </body>
+</html>
