@@ -11,6 +11,8 @@ You can see a running version of this form [here](http://107.170.163.81:8080/)
 - Persistence with SQLite
 - Clone and start with 'lein repl' from the base dir.
 - In the repl:
+- => (in-ns 'fastform.db)
+- => (setup) ;; in order to pre populate the db with a couple of meetups
 - => (in-ns 'fastform.server)
 - => (-main)
 - You should now have a server running. Go to [http://localhost:8080](http://localhost:8080) and behold.
