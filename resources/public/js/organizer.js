@@ -13,7 +13,7 @@ function eventEndHandlerSignal () {
 (function ($) {
     
     var progressCount = 0;
-    var fieldCount = 9;
+    var fieldCount = 10;
     var progressPercent = 0;
     var fieldArray = [
         {id: 'fname1',
@@ -90,40 +90,51 @@ function eventEndHandlerSignal () {
              }
          }
         },
-        {id: 'addr1',
+        {id: 'autocomplete',
          validated: false,
          visited: false,
          msg: null,
          validate: function () {
              if(this.visited) {
-                 var em = $('#addr1').val();
-                 if(em.length < 2) {this.msg = ('Please check that the address 1 is correct'); this.validated = false;}
+                 this.validated = true;
+//                 checkVisited();
+             }
+         }
+        },
+        {id: 'street_number',
+         validated: false,
+         visited: false,
+         msg: null,
+         validate: function () {
+             if(this.visited) {
+                 var em = $('#street_number').val();
+                 if(em.length == 0) {this.msg = ('Please check that the street number is filled in'); this.validated = false;}
                  else {
                      this.validated = true;
                  }
              }
          }
         },
-        {id: 'addr2',
+        {id: 'route',
          validated: false,
          visited: false,
          msg: null,
          validate: function () {
              if(this.visited) {
-                 var em = $('#addr2').val();
-                 if(em.length < 2) {this.msg = ('Please check that the address 2 is correct'); this.validated = false;}
+                 var em = $('#route').val();
+                 if(em.length < 2) {this.msg = ('Please check that the address 1 is correct'); this.validated = false;}
                  else {
                  }
              }
          }
         },
-        {id: 'addrcity',
+        {id: 'locality',
          validated: false,
          visited: false,
          msg: null,
          validate: function () {
              if(this.visited) {
-                 var em = $('#addrcity').val();
+                 var em = $('#locality').val();
                  if(em.length < 2) {this.msg = ('Please check that city is correct'); this.validated = false;}
                  else {
                      this.validated = true;
@@ -131,41 +142,41 @@ function eventEndHandlerSignal () {
              }
          }
         },
-        {id: 'addrstate',
+        {id: 'administrative_area_level_1',
          validated: false,
          visited: false,
          msg: null,
          validate: function () {
              if(this.visited) {
-                 var em = $('#addrstate').val();
-                 if(em.length < 2) {this.msg = ('Please check that state is correct'); this.validated = false;}
+                 var em = $('#administrative_area_level_1').val();
+                 if(em.length < 2) {this.msg = ('Please check that state/province is correct'); this.validated = false;}
                  else {
                      this.validated = true;
                  }
              }
          }
         },
-        {id: 'addrpc',
+        {id: 'postal_code',
          validated: false,
          visited: false,
          msg: null,
          validate: function () {
              if(this.visited) {
-                 var em = $('#addrpc').val();
-                 if(em.length != 5) {this.msg = ('Please check that post code is correct'); this.validated = false;}
+                 var em = $('#postal_code').val();
+                 if(em.length < 4) {this.msg = ('Please check that post code is correct'); this.validated = false;}
                  else {
                      this.validated = true;
                  }
              }
          }
         },
-        {id: 'addrcountry',
+        {id: 'country',
          validated: false,
          visited: false,
          msg: null,
          validate: function () {
              if(this.visited) {
-                 var em = $('#addrcountry').val();
+                 var em = $('#country').val();
                  if(em.length < 2) {this.msg = ('Please check that country is correct'); this.validated = false;}
                  else {
                      this.validated = true;
@@ -232,6 +243,7 @@ function eventEndHandlerSignal () {
     blurNotify();
     $('#eventstart').blur(handler);
     $('#eventend').blur(handler);
+    $('#form1').blur(handler);
     
 })(jQuery);
 

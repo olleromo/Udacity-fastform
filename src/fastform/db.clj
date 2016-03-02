@@ -15,8 +15,9 @@
    :jobtitle "Clerk"
    :employer "IBM"
    :birthday ""
-   :addr1 "Long Street 34"
+   :addr1 "Long Street"
    :addr2 ""
+   :addrno "45"
    :addrcity "Gotham"
    :addrstate "Texas"
    :addrpc "12345"
@@ -32,8 +33,9 @@
    :jobtitle "Janitor"
    :employer "Smithson & Smithson"
    :birthday ""
-   :addr1 "Back Street 21"
+   :addr1 "Back Street"
    :addr2 ""
+   :addrno "4"
    :addrcity "Amersham"
    :addrstate "London"
    :addrpc "SWE45"
@@ -45,6 +47,7 @@
                                    [:id :integer
                                     :primary :key
                                     :autoincrement]
+                                   [:autocomplete :text]
                                    [:fname :text]
                                    [:lname :text]
                                    [:password :text]
@@ -55,6 +58,7 @@
                                    [:employer :text]
                                    [:birthday :text]
                                    [:addr1 :text]
+                                   [:addrno :text]
                                    [:addr2 :text]
                                    [:addrcity :text]
                                    [:addrstate :text]
@@ -76,7 +80,8 @@
    :eventstart "2016-2-3T12:39"
    :eventend "2016-5-8T11:00"
    :eventguestlist "me, you, her, him"
-   :addr1 "Great Street 2"
+   :addr1 "Great Street"
+   :addrno "523"
    :addr2 ""
    :addrcity "Buffalo"
    :addrstate "NY"
@@ -92,7 +97,8 @@
    :eventstart "2016-8-8T10:00"
    :eventend "2016-8-8T11:00"
    :eventguestlist "me, you, her, him"
-   :addr1 "Small Street 2"
+   :addr1 "Small Street"
+   :addrno "124"
    :addr2 ""
    :addrcity "Sherman Oaks"
    :addrstate "CA"
@@ -108,8 +114,9 @@
    :eventstart "2016-9-12T13:00"
    :eventend "2016-9-12T16:00"
    :eventguestlist "me, you, her, him"
-   :addr1 "Curvy Street 2"
+   :addr1 "Curvy Street"
    :addr2 ""
+   :addrno "2"
    :addrcity "Encino"
    :addrstate "CA"
    :addrpc "54324"
@@ -122,6 +129,8 @@
                                    [:id :integer
                                     :primary :key
                                     :autoincrement]
+                                   [:addrno :text]
+                                   [:autocomplete :text]
                                    [:user :integer]
                                    [:eventname :text]
                                    [:eventtype :text]

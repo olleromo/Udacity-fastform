@@ -34,8 +34,9 @@
                 '<div class="eventstart meet">' + 'From: ' + formatDate(data[i].eventstart) + '</div>' +
                 '<div class="eventend meet">' + 'To: ' + formatDate(data[i].eventend) + '</div>' +
                 '</div><div class="row">' +
+                '<div class="addrno meet">' + data[i].addrno + '</div>' +
                 '<div class="addr1 meet">' + data[i].addr1 + '</div>' +
-                '<div class="addr2 meet">' + data[i].addr2 + '</div>' +
+                // '<div class="addr2 meet">' + data[i].addr2 + '</div>' +
                 '<div class="addrcity meet">' + data[i].addrcity + '</div>' +
                 '</div><div class="row">' +
                 '<div class="addrpc meet">' + data[i].addrpc + '</div>' +

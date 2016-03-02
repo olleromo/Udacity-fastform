@@ -33,13 +33,13 @@
       <h3>Your Name and Email Address</h3>
       <form action="/organizer" method="post" id="form1" autocomplete="on">
         <label class="labelshowhide"for="fname1" >First Name</label>
-          <input type="text" name="fname" placeholder="First Name" id="fname1" required autofocus>
-
+        <input type="text" name="fname" placeholder="First Name" id="fname1" required autofocus>
+        
         <label class="labelshowhide" for="lname1">Last Name</label>
-          <input type="text" name="lname" placeholder="Last Name" id="lname1" required>
+        <input type="text" name="lname" placeholder="Last Name" id="lname1" required>
         
         <label class="labelshowhide" for="email">Email Address</label>
-          <input type="email" name="email" placeholder="Email address" id="email" required>
+        <input type="email" name="email" placeholder="Email address" id="email" required>
         
         <label>Password <h6> Need to contain at least 6 characters with a mix of uppercase, lowercase, numbers and at least one of these symbols: !, @, #, $, %, ^, &, * </h6> 
           <input type="password" name="password" placeholder="Password" id="password" required>
@@ -47,42 +47,48 @@
         <label>Please retype password
           <input type="password" name="password2" placeholder="Please retype password" id="password2" required>
         </label>
-
+        
         
         <h3>Your Address</h3>
-        <label class="labelshowhide" for="addr1" >Address Line 1</label>
-          <input type="text" name="addr1" placeholder="Address Line 1" id="addr1" onFocus="geolocate()" required>
-
-        <label class="labelshowhide" for="addrno">City</label>
-        <input type="text" name="addrno" placeholder="No" id="street_number" required>
+        <label class="labelshowhide" for="autocomplete" >Address Line 1</label>
+        <input type="text" name="autocomplete" placeholder="Please type your address here" id="autocomplete" onFocus="geolocate()" required>
         
-        <label class="labelshowhide" for="addrcity">City</label>
-          <input type="text" name="addrcity" placeholder="City" id="addrcity" required>
-
-        <label class="labelshowhide" for="addrstate">State/Province</label>
-          <input type="text" name="addrstate" placeholder="State/Province" id="addrstate">
-
-        <label class="labelshowhide" for="addrpc">Postal Code</label>
-          <input type="text" name="addrpc" placeholder="Postal Code" id="addrpc" required>
-
-        <label class="labelshowhide" for="addrcountry">Country</label>
-        <input type="text" name="addrcountry" placeholder="Country" id="addrcountry" required>
-
+        <div class="row">
+          <div class="small-3">
+            <label class="labelshowhide" for="street_number">Street Number</label>
+            <input type="text" disabled="true" name="addrno" placeholder="No" id="street_number" required>
+          </div>
+          <label class="labelshowhide" for="route" >Address Line 1</label>
+          <input type="text" disabled="true" name="addr1" placeholder="Address Line 1" id="route" required>
+        </div>
+        
+        <label class="labelshowhide" for="locality">City</label>
+        <input type="text" disabled="true" name="addrcity" placeholder="City" id="locality" required>
+        
+        <label class="labelshowhide" for="administrative_area_level_1">State/Province</label>
+        <input type="text" disabled="true" name="addrstate" placeholder="State/Province" id="administrative_area_level_1">
+        
+        <label class="labelshowhide" for="postal_code">Postal Code</label>
+        <input type="text" disabled="true" name="addrpc" placeholder="Postal Code" id="postal_code" required>
+        
+        <label class="labelshowhide" for="country">Country</label>
+        <input type="text" disabled="true" name="addrcountry" placeholder="Country" id="country" required>
+        
         <h3>Personal Information (optional)</h3>
         <div class="row">
           <div class="title small-2">
-          <label class="title" for="title">Title</label>
-          <input type="text" name="title" placeholder="Title" id="title"/>
+            <label class="title" for="title">Title</label>
+            <input type="text" name="title" placeholder="Title" id="title"/>
           </div><div>
-          <label for="birthday">Birthday</label>
-          <input type="date" name="birthday" placeholder="Birthday" id="birthday"/>
+            <label for="birthday">Birthday</label>
+            <input type="date" name="birthday" placeholder="Birthday" id="birthday"/>
           </div>
         </div>
         <label class="labelshowhide" for="jobtitle">Job Title</label>
-          <input type="text" name="jobtitle" placeholder="Job Title" id="jobtitle">
+        <input type="text" name="jobtitle" placeholder="Job Title" id="jobtitle">
         <label class="labelshowhide" for="employer">Employer</label>
-          <input type="text" name="employer" placeholder="Employer" id="employer">        
-
+        <input type="text" name="employer" placeholder="Employer" id="employer">        
+        
         <section class="order-review">
           <input id="submit" type="submit">
         </section>
@@ -95,3 +101,4 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgqJoYi2AeOIt5So1zUt6EGstYol9QhDc&libraries=places&callback=initAutocomplete" async defer></script>
   </body>
 </html>
+k
