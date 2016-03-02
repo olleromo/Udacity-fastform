@@ -8,18 +8,20 @@
 var placeSearch, autocomplete;
 var componentForm = {
   street_number: 'short_name',
-  route: 'long_name',
-  locality: 'long_name',
-  administrative_area_level_1: 'short_name',
-  country: 'long_name',
-  postal_code: 'short_name'
+  addr1: 'long_name',
+  addrcity: 'long_name',
+  addrstate: 'short_name',
+  addrcountry: 'long_name',
+  addrpc: 'short_name'
 };
 
 function initAutocomplete() {
+    console.log('autocomplete called');
   // Create the autocomplete object, restricting the search to geographical
   // location types.
   autocomplete = new google.maps.places.Autocomplete(
-      /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+      /** @type {!HTMLInputElement} */
+      (document.getElementById('addr1')),
       {types: ['geocode']});
 
   // When the user selects an address from the dropdown, populate the address
@@ -32,7 +34,7 @@ function fillInAddress() {
   var place = autocomplete.getPlace();
 
   for (var component in componentForm) {
-    document.getElementById(component).value = '';
+      document.getElementById(component).value = '';
     document.getElementById(component).disabled = false;
   }
 

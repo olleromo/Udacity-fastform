@@ -51,11 +51,11 @@
         
         <h3>Your Address</h3>
         <label class="labelshowhide" for="addr1" >Address Line 1</label>
-          <input type="text" name="addr1" placeholder="Address Line 1" id="addr1" required>
+          <input type="text" name="addr1" placeholder="Address Line 1" id="addr1" onFocus="geolocate()" required>
 
-        <label class="labelshowhide" for="addr2">Address Line 2</label>
-          <input type="text" name="addr2" placeholder="Address Line 2" id="addr2">
-
+        <label class="labelshowhide" for="addrno">City</label>
+        <input type="text" name="addrno" placeholder="No" id="street_number" required>
+        
         <label class="labelshowhide" for="addrcity">City</label>
           <input type="text" name="addrcity" placeholder="City" id="addrcity" required>
 
@@ -88,13 +88,10 @@
         </section>
       </form>
     </section>
-    <script src="js/jquery.js">
-    </script>
-    <script src="js/foundation.js">
-    </script>
-    <script src="js/organizer.js">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgqJoYi2AeOIt5So1zUt6EGstYol9QhDc&libraries=places">
-    </script>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/foundation.js"></script>
+    <script src="js/organizer.js"></script>
+    <script src="js/placeautocomplete.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgqJoYi2AeOIt5So1zUt6EGstYol9QhDc&libraries=places&callback=initAutocomplete" async defer></script>
   </body>
 </html>
